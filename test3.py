@@ -3,7 +3,7 @@
 
 __author__ = 'marinashchukina'
 
-list = ['the', 'holy', 'grail']
+list = ['the', 'holy', 'grail', 'the']
 nested_list = ['monty', 'python', 'and',\
                list]
 input_list = ['alisa', 'zoja']
@@ -17,8 +17,14 @@ nested_list.extend(list)
 
 new_tuple = tuple[0:-2]
 
-# Выведите все элементы списка с четными индексами (то есть A[0], A[2], A[4], ...).
+# SETS unordered collections with unique elements, no duplicates allowed
+set1 = set(list)
 
+# Dictionaries
+dict1 = {'alisa':'sleeps', 'scarlett':'playing', 'zoja': 'chilling'}
+#dict1['zmeja'] = 'hissing'
+#del dict1['alisa']
+print 'alisa' in dict1.keys()
 
 list_numbers = [1,2,3,4,5]
 
