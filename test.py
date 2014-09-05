@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# """ Implementation on classmethod and staticmethod """
+# """ Implementation on @classmethod and @staticmethod """
 
 class MyDate(object):
     day = 0

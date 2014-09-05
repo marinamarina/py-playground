@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 """ Python wrapper for the Domainr API
     https://domai.nr/
+    version = 0.0.1
+    TODO: escape the unicode char
+          add certificate
 """
 
 from urllib import urlopen
@@ -8,8 +11,6 @@ import json
 import urllib3
 import certifi
 import re
-
-__author__ = 'marinashchukina'
 
 class DomainWrapper:
 
@@ -34,6 +35,8 @@ class DomainWrapper:
         results = self.load_json()
 
         for result in results:
+
+            # only interested in domains containing the searched word
             if self.domain_name not in result['domain']:
                 continue
 
@@ -42,10 +45,10 @@ class DomainWrapper:
             else:
                 self.__list_available.append(result['domain'])
 
-    def printLists(self):
+    def print_lists(self):
         self.load_lists()
         print self.__list_available, self.__list_unavailable
 
 # Example usage
-domainer = DomainWrapper('alisa')
-domainer.printLists()
+domainer = DomainWrapper('pythonhub')
+domainer.print_lists()

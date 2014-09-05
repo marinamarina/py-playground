@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # """ lists tuples dictionaries """
 
-__author__ = 'marinashchukina'
-
 list = ['the', 'holy', 'grail', 'the']
 nested_list = ['monty', 'python', 'and',\
                list]
