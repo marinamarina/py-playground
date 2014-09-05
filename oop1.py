@@ -1,5 +1,3 @@
-__author__ = 'marinashchukina'
-
 #!/usr/bin/env python
 """ OOP """
 

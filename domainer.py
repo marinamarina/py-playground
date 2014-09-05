@@ -9,8 +9,6 @@ import urllib3
 import certifi
 import re
 
-__author__ = 'marinashchukina'
-
 class DomainWrapper:
 
     #domain_name=''
