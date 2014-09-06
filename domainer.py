@@ -13,6 +13,7 @@ import certifi
 import re
 
 class DomainWrapper:
+    'Python Domainr API wrapper'
 
     #domain_name=''
     __list_available=[]
@@ -23,6 +24,10 @@ class DomainWrapper:
         self.link = 'https://domai.nr/api/json/search?&client_id=marinashchukina&q=' + domain_name
 
     def load_json(self):
+        '''
+        Load the json
+        :return:
+        '''
         http = urllib3.PoolManager()
         r = http.request('GET', self.link)
         my_json = json.loads(r.data)
@@ -32,6 +37,7 @@ class DomainWrapper:
         return my_json['results']
 
     def load_lists(self):
+        'Assign values to the availability lists'
         results = self.load_json()
 
         for result in results:
