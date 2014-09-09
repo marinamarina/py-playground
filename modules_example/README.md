@@ -1,0 +1,10 @@
+parent_directory/
+       main.py
+       ecommerce/
+             __init__.py
+             database.py
+             products.py
+             payments/
+                    __init__.py
+                    paypal.py
+                    authorizenet.py
