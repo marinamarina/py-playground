@@ -91,9 +91,9 @@ class Person:
 
 
 
-#person1 = Person('Lisi', 'Kisa')
+person1 = Person('Lisi', 'Kisa')
 #person1.name = 'Kisi', 'Lisi'
-#print person1.name
+print person1.name
 from math import sqrt
 
 class Point:
@@ -131,3 +131,19 @@ assert (p.checkDistance(q) == q.checkDistance(p))
 p.move(3, 4)
 print p.checkDistance(q)
 print p.checkDistance(p)
+
+class SecretString:
+    '''A not secure way to store a secret string'''
+
+    def __init__(self, plain_string, pass_phrase):
+        self.__plain_string = plain_string
+        self.__pass_phrase = pass_phrase
+
+    def decrypt(self, pass_phrase):
+        if pass_phrase == self.__pass_phrase:
+            return self.__plain_string
+        else:
+            return 'You have not guessed'
+
+secret = SecretString('BiG secret', 'shh')
+print secret._SecretString__plain_string

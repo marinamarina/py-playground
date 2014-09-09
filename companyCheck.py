@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-""" Python wrapper for the Domainr API
+""" Python wrapper for the Company Check API
     https://domai.nr/
     version = 0.0.1
     TODO: escape the unicode char
@@ -12,17 +12,16 @@ import urllib3
 import certifi
 import re
 
-class DomainWrapper:
-    'Python Domainr API wrapper'
+class CompanyCheckWrapper:
+    'Python Company Check API wrapper'
 
     #domain_name=''
     __list_available=[]
     __list_unavailable=[]
 
-    def __init__(self,  domain_name='alisa'):
-        self.domain_name = domain_name
-        self.link = 'https://domai.nr/api/json/search?&client_id=marinashchukina&q=' + domain_name
-
+    def __init__(self,  company_name='alisa'):
+        self.company_name = company_name
+        self.link = 'https://companycheck.co.uk/api/json/search?name=' + company_name + '&apiKey='
     def load_json(self):
         '''
         Load the json
