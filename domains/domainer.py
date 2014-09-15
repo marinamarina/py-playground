@@ -15,13 +15,11 @@ import re
 class DomainWrapper:
     'Python Domainr API wrapper'
 
-    #domain_name=''
-    __list_available=[]
-    __list_unavailable=[]
-
     def __init__(self,  domain_name='alisa'):
         self.domain_name = domain_name
         self.link = 'https://domai.nr/api/json/search?&client_id=marinashchukina&q=' + domain_name
+        self._list_available = []
+        self._list_unavailable = []
 
     def load_json(self):
         '''
@@ -47,14 +45,14 @@ class DomainWrapper:
                 continue
 
             if result['availability'] == 'taken':
-                self.__list_unavailable.append(result['domain'])
+                self._list_unavailable.append(result['domain'])
             else:
-                self.__list_available.append(result['domain'])
+                self._list_available.append(result['domain'])
 
     def print_lists(self):
         'print the availability lists'
         self.load_lists()
-        print self.__list_available, self.__list_unavailable
+        print self._list_available, self._list_unavailable
 
 # Example usage
 domainer = DomainWrapper('pythonhub')
