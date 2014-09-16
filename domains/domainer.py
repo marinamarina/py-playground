@@ -35,6 +35,7 @@ class DomainWrapper:
 
     def load_lists(self):
         '''assign values to the availability lists'''
+
         self._list_available = []
         self._list_unavailable = []
 
